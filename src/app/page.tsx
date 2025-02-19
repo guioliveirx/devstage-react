@@ -1,11 +1,12 @@
 import Button from "@/components/Button";
 import IconButton from "@/components/IconButton";
-import { ArrowRight, Copy } from "lucide-react";
+import { InputField, InputIcon, InputRoot } from "@/components/Input";
+import { ArrowRight, Copy, Mail } from "lucide-react";
 
 export default function Home() {
     return (
         <main>
-            <Button>
+            <Button type="submit">
                 Enviar
                 <ArrowRight/>
             </Button>
@@ -13,6 +14,14 @@ export default function Home() {
             <IconButton>
                 <Copy />
             </IconButton>
+
+            <InputRoot>
+                <InputIcon>
+                    <Mail/>
+                </InputIcon>
+                
+                <InputField/>
+            </InputRoot>
         </main>
     );
 }

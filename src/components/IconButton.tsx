@@ -1,14 +1,13 @@
-import React, { ReactNode } from "react";
+import React, { ComponentProps } from "react";
 
-interface IconButtonProps {
-    children: ReactNode;
-}
+interface IconButtonProps extends ComponentProps<"button"> {}
 
-const IconButton = ({ children }: IconButtonProps) => {
+const IconButton = (props: IconButtonProps) => {
     return (
-        <button className="p-1.5 bg-gray-500 text-blue font-semibold rounded-md cursor-pointer transition-colors duration-300 ease-out hover:bg-blue hover:text-gray-700">
-            {children}
-        </button>
+        <button
+            className="p-1.5 bg-gray-500 text-blue font-semibold rounded-md cursor-pointer transition-colors duration-300 ease-out hover:bg-blue hover:text-gray-700"
+            {...props}
+        />
     );
 };
 
