@@ -1,11 +1,8 @@
 import Image from 'next/image'
-import React from 'react'
 import logo from '../../assets/logo.svg'
-import { BadgeCheck, Copy, Link, Medal, MousePointerClick } from 'lucide-react'
-import { InputField, InputIcon, InputRoot } from '@/components/Input'
-import IconButton from '@/components/IconButton'
 import Ranking from './Ranking'
 import Stats from './Stats'
+import InviteLinkInput from './InviteLinkInput'
 
 const page = () => {
   return (
@@ -34,18 +31,7 @@ const page = () => {
             </p>
           </div>
 
-          <InputRoot>
-            <InputIcon>
-              <Link className="size-5" />
-            </InputIcon>
-            <InputField
-              readOnly
-              defaultValue="http://localhost:3000/invite/123021i3jsadiajs213"
-            />
-            <IconButton className="-mr-2">
-              <Copy className="size-5" />
-            </IconButton>
-          </InputRoot>
+          <InviteLinkInput />
 
           <Stats />
         </div>
