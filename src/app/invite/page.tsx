@@ -4,7 +4,9 @@ import Ranking from './Ranking'
 import Stats from './Stats'
 import InviteLinkInput from './InviteLinkInput'
 
-const page = () => {
+const InvitePage = () => {
+  const inviteLink = 'http://localhost:3000/invasdasdasd23123123ite'
+
   return (
     <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">
       <div className="flex flex-col gap-10 w-full max-w-[550px]">
@@ -31,7 +33,7 @@ const page = () => {
             </p>
           </div>
 
-          <InviteLinkInput />
+          <InviteLinkInput inviteLink={inviteLink}/>
 
           <Stats />
         </div>
@@ -42,4 +44,4 @@ const page = () => {
   )
 }
 
-export default page
+export default InvitePage

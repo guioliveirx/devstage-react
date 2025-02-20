@@ -1,19 +1,26 @@
+'use client'
+
 import IconButton from '@/components/IconButton'
 import { InputRoot, InputIcon, InputField } from '@/components/Input'
 import { Link, Copy } from 'lucide-react'
 import React from 'react'
 
-const InviteLinkInput = () => {
+interface InviteLinkInputProps {
+  inviteLink: string
+}
+
+const InviteLinkInput = ({ inviteLink }: InviteLinkInputProps) => {
+  const copyInviteLink = () => {
+    navigator.clipboard.writeText(inviteLink)
+  }
+
   return (
     <InputRoot>
       <InputIcon>
         <Link className="size-5" />
       </InputIcon>
-      <InputField
-        readOnly
-        defaultValue="http://localhost:3000/invite/123021i3jsadiajs213"
-      />
-      <IconButton className="-mr-2">
+      <InputField readOnly defaultValue={inviteLink} />
+      <IconButton className="-mr-2" onClick={copyInviteLink}>
         <Copy className="size-5" />
       </IconButton>
     </InputRoot>
