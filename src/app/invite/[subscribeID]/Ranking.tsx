@@ -1,7 +1,7 @@
 import React from 'react'
-import MedalGold from '../../assets/medal-gold.svg'
-import MedalCooper from '../../assets/medal-cooper.svg'
-import MedalSilver from '../../assets/medal-silver.svg'
+import MedalGold from '../../../assets/medal-gold.svg'
+import MedalCooper from '../../../assets/medal-cooper.svg'
+import MedalSilver from '../../../assets/medal-silver.svg'
 import Image from 'next/image'
 
 const Ranking = () => {
