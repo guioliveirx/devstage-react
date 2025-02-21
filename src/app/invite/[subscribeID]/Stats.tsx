@@ -1,11 +1,9 @@
 import {
-  getGetSubscriberInviteCountUrl,
   getSubscriberInviteClicks,
   getSubscriberInviteCount,
-  getSubscriberRankingPosition,
+  getSubscriberRankingPosition
 } from '@/http/api'
 import { BadgeCheck, Medal, MousePointerClick } from 'lucide-react'
-import React from 'react'
 
 interface StastProps {
   subscriberId: string
