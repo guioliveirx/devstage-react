@@ -8,13 +8,13 @@ export default defineConfig({
       client: 'fetch',
       httpClient: 'fetch',
       clean: true,
-      baseUrl: "http://localhost:3333",
+      baseUrl: 'http://localhost:3333',
 
       override: {
         fetch: {
-            includeHttpResponseReturnType: false,
-        }
-      }
+          includeHttpResponseReturnType: false,
+        },
+      },
     },
   },
 })
